@@ -2,24 +2,21 @@
 h1 {
 color: orangered;
 font-size: 45px;
+font-weight: 500px;
+color: #222;
+letter-spacing: 4.5px;
+cursor: pointer;
+text-transform: uppercase;
+transition: 0.5s;
 }
-h1 {
-    font-size: 6em;
-    font-weight: 500;
-    color: #222;
-    letter-spacing: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 0.5s;
-  }
-  
-  h1:hover {
-    color: yellowgreen;
-    text-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-  }
+
+h1:hover {
+color: yellowgreen;
+text-shadow: 0 0 5px #03e9f4,
+0 0 25px #03e9f4,
+0 0 50px #03e9f4,
+0 0 100px #03e9f4;
+}
 #b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9{
 width: 80px;
 height: 52px;
@@ -31,8 +28,9 @@ text-align: center;
 cursor: pointer;
 }
 #b1:hover, #b2:hover, #b3:hover, #b4:hover, #b5:hover, #b6:hover, #b7:hover, #b8:hover, #b9:hover{
-    background-color: rgb(5, 134, 5);
-    transition: background-color 0.15s;
+background-color: rgb(5, 134, 5);
+transition: background-color 0.15s;
+color: white;
 }
 
 /*reset btn*/
@@ -64,4 +62,60 @@ text-align: center;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 color: dodgerblue;
 font-size: 17px;
+}
+.spinner {
+width: 44px;
+height: 44px;
+animation: spinner-y0fdc1 2s infinite ease;
+transform-style: preserve-3d;
+}
+
+.spinner > div {
+background-color: rgba(0,77,255,0.2);
+height: 100%;
+position: absolute;
+width: 100%;
+border: 2px solid #004dff;
+}
+
+.spinner div:nth-of-type(1) {
+transform: translateZ(-22px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+transform: rotateY(-270deg) translateX(50%);
+transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+transform: rotateY(270deg) translateX(-50%);
+transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+transform: rotateX(90deg) translateY(-50%);
+transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+transform: rotateX(-90deg) translateY(50%);
+transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+transform: translateZ(22px);
+}
+
+@keyframes spinner-y0fdc1 {
+0% {
+transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+}
+
+50% {   
+transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+}
+
+100% {
+transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+}
 }
